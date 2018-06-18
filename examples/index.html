@@ -31,15 +31,10 @@
 
     <form action="../include_lw/graphic_recording.php" method="post" enctype="multipart/form-data">
         <div class="file-loading">
-            <input id="kv-explorer" name="file_array[]" type="file" multiple> <!-- name="file ,file_array[]" -->
+            <input id="kv-explorer" name="file_array[]" type="file" data-upload-url="../include_lw/graphic_recording.php" multiple> <!-- name="file ,file_array[]" -->
         </div>
-        <br>
-        <div class="file-loading">
-            <input id="file-0a" class="file" type="file" multiple data-min-file-count="1">
-        </div>
-        <br>
-        <button type="submit" class="btn btn-primary">Dodaj</button>
-        <button type="reset" class="btn btn-default">Reset</button>
+        <!-- <button type="submit" class="btn btn-primary">Dodaj</button>
+        <button type="reset" class="btn btn-default">Reset</button> -->
     </form>
     <hr>
 
@@ -222,17 +217,17 @@
             'theme': 'fa',
             'showPreview': false,
             'allowedFileExtensions': ['jpg', 'png', 'gif'],
-            'elErrorContainer': '#errorBlock'
+             'elErrorContainer': '#errorBlock'
         });
         $("#kv-explorer").fileinput({
             'theme': 'explorer-fa',
-            'uploadUrl': '#',
+            'uploadUrl': '../include_lw/graphic_recording.php',
             overwriteInitial: false,
             initialPreviewAsData: true,
             initialPreview: [
-                "http://lorempixel.com/1920/1080/nature/1",
-                "http://lorempixel.com/1920/1080/nature/2",
-                "http://lorempixel.com/1920/1080/nature/3"
+                // "http://lorempixel.com/1920/1080/nature/1",
+                // "http://lorempixel.com/1920/1080/nature/2",
+                // "http://lorempixel.com/1920/1080/nature/3"
             ],
             initialPreviewConfig: [
                 {caption: "nature-1.jpg", size: 329892, width: "120px", url: "{$url}", key: 1},
