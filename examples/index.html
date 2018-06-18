@@ -45,6 +45,7 @@
     <script src="../js/plugins/sortable.js" type="text/javascript"></script>
     <script src="../js/fileinput.js" type="text/javascript"></script>
     <script src="../js/locales/fr.js" type="text/javascript"></script>
+    <script src="../js/locales/pl.js" type="text/javascript"></script>
     <script src="../js/locales/es.js" type="text/javascript"></script>
     <script src="../themes/explorer-fa/theme.js" type="text/javascript"></script>
     <script src="../themes/fa/theme.js" type="text/javascript"></script>
@@ -65,7 +66,7 @@
         </div> -->
         <br>
         <div class="file-loading">
-          <input id="images" name="images[]" type="file" multiple>
+          <input id="file-pl" name="file-pl[]" type="file" multiple>
             <!-- <input id="file-0a" class="file" type="file" multiple data-min-file-count="1"> --->
         </div>
     </form>
@@ -74,7 +75,7 @@
 <script>
 
 // $(document).on("ready", function() {
-//     $("#images").fileinput({
+//     $("#file-pl").fileinput({
 //       theme: "explorer-fa",
 //         uploadAsync: false,
 //         uploadUrl: "../include_lw/graphic_recording.php" // your upload server url
@@ -88,8 +89,9 @@
         //     'allowedFileExtensions': ['jpg', 'png', 'gif'],
         //     'elErrorContainer': '#errorBlock'
         // });
-        $("#images").fileinput({
+        $("#file-pl").fileinput({
             'theme': 'explorer-fa',
+             'language': 'pl',
             'uploadUrl': '../include_lw/upload.php', //graphic_recording.php',
             overwriteInitial: false,
             initialPreviewAsData: true,

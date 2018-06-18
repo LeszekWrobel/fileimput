@@ -1,14 +1,14 @@
 <?php
 // upload.php
 // 'images' refers to your file input name attribute
-if (empty($_FILES['images'])) {
+if (empty($_FILES['file-pl'])) {
     echo json_encode(['error'=>'No files found for upload.']);
     // or you can throw an exception
     return; // terminate
 }
 
 // get the files posted
-$images = $_FILES['images'];
+$images = $_FILES['file-pl'];
 
 // get user id posted
 $userid = empty($_POST['userid']) ? '' : $_POST['userid'];
@@ -43,8 +43,6 @@ if ($success === true) {
     // call the function to save all data to database
     // code for the following function `save_data` is not
     // mentioned in this example
-  //  save_data($userid, $username, $paths);
-
     // store a successful response (default at least an empty array). You
     // could return any additional response info you need to the plugin for
     // advanced implementations.
